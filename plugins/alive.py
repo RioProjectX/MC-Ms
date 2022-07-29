@@ -40,7 +40,6 @@ Hello ! {}
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 Introduce I Am Mirc Music Bot. Ready To Accompany You Playing Music With Easy Voice Chat Groups In.!
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-.
 """
     reply_markup=InlineKeyboardMarkup(
             [

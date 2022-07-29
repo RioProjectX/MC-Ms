@@ -1,5 +1,4 @@
-# Copyright (C) 2021 By AdityaPlayer
-
+#2
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Dialog, Chat, Message

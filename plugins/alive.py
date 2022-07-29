@@ -32,24 +32,21 @@ async def _human_time_duration(seconds):
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAx0CW4fzOQACCnNi3-DCblC8u2FslQ3DlfoewhN4mQACeAUAAsRhkFY0s4zqVS0wySkE")
+    await message.reply_sticker("")
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/142893a0f7022b7e8a149.jpg",
-        caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
-💥 ʜᴇʟʟᴏ, ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ᴠᴄ ᴘʟᴀʏᴇʀ
-ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs ...
-┏━━━━━━━━━━━━━━┓
-┣★
-┣★ ᴍᴀᴅᴇ ʙʏ: [ϟ ᴀŔᴏN](https://t.me/Aron_is_bot)
-┣★
-┗━━━━━━━━━━━━━━┛
-
-━━━━━━━━━━━━━━━━━━━━━━━━**""",
+        photo=f"https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg",
+        caption=f"""
+Hello ! {}
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+Introduce I Am Mirc Music Bot. Ready To Accompany You Playing Music With Easy Voice Chat Groups In.!
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+.
+""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ ADD ME ❱ ➕", url=f"https://t.me/Aron_music_bot?startgroup=true")
+                        "➕ ❰ ADD ME ❱ ➕", url=f"https://t.me/@MircMusicbot?startgroup=true")
                 ]
                 
            ]
@@ -59,15 +56,15 @@ async def start_(client: Client, message: Message):
     
 @Client.on_message(commandpro(["/start", "/alive", "aron"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAx0CXClP2gABBLTCYuFs-TkNHvTNe5e_qiGcdPG-aXIAAwYAAp2ukFaP9z-ZyPi3WikE")
+    await message.reply_sticker("")
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/142893a0f7022b7e8a149.jpg",
+        photo=f"https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💥 ᴊᴏɪɴ ʜᴇʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ 💞", url=f"https://t.me/ALONE_MUSIC_ADD_ICT")
+                        "💥 ᴊᴏɪɴ ʜᴇʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ 💞", url=f"https://t.me/riogroupsupport")
                 ]
             ]
         ),
@@ -77,13 +74,13 @@ async def start(client: Client, message: Message):
 @Client.on_message(commandpro(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/142893a0f7022b7e8a149.jpg",
+        photo=f"https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ᴀxᴇᴏɴ", url=f"https://t.me/Axeon_bot")
+                        "ᴀxᴇᴏɴ", url=f"https://t.me/MircMusicBot")
                 ]
             ]
         ),

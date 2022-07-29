@@ -1,9 +1,9 @@
 {
-  "name": "ALONE",
-  "logo": "https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg",
+  "name": "Mrch",
+  "logo": "https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg",
   "description": "A SuperFast VC Player bot to play songs in Telegram Video Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram", "Alone"],
-  "repository": "https://github.com/i-am-pro-king/Alone-Music",
+  "repository": "https://github.com/RioProjectX/MC-Ms",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -30,7 +30,7 @@
     "SUDO_USERS": {
       "description": "User IDs of the users who will counted as admin everywhere (if more than one separate them by space).",
       "required": true,
-      "value": "5576342145"
+      "value": ""
     },
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",

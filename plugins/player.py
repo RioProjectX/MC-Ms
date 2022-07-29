@@ -75,7 +75,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image1 = Image.open("./background.png")
-    image2 = Image.open("resource/thumbnail.png")
+    image2 = Image.open("resource/thumbnail.jpeg")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
@@ -89,7 +89,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"Powered By: Aron_music_bot (@Aron_music_bot)",
+        f"Powered By: Rio BOT (@riasyee)",
         (255, 255, 255),
         font=font,
     )
@@ -129,24 +129,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "**💥 Ʌʈ🤞Fɩrsʈ 🥀 Ɱɑƙɘ ♥️ Ɱɘ ⭐ Ʌɗɱɩŋ 😎 ...**")
+                        "**💥 Make this bot admin to use 😎 ...**")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** 😎 I🤞ʌɱ 🥀 Ʀɘɑɗy ♥️ Ƭø ⭐ Ƥɭɑy 😎 ...**")
+                        message.chat.id, "**  Im Ready To Use...**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🎸 Ƥɭɘɑsɘ ❤️ Ɱɑŋʋɑɭɭy 🥀 Ʌɗɗ 💫 Ʌssɩsʈɑŋʈ 😔 Øɤ 🎸 Ƈøŋʈɑƈʈ ❤️ ʈø : @ALONE_MUSIC_ADD_ICT 🥀** ")
+                        f"**🎸 Please Manually Add Assistant Or Contact To : @riasyee ")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🎸 Ƥɭɘɑsɘ ❤️ Ɱɑŋʋɑɭɭy 🥀 Ʌɗɗ 💫 Ʌssɩsʈɑŋʈ 😔 Øɤ 🎸 Ƈøŋʈɑƈʈ ❤️ ʈø : @ALONE_MUSIC_ADD_ICT 🥀 ...*")
+            f"**🎸 Please Manually Add Assistant Or Contact To : @riasyee ...*")
         return
     
     audio = (
@@ -159,12 +159,12 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**💥 Musik Tidak Boleh Lebih ⚡️\n Dari {DURATION_LIMIT} 💞 Menit ...**"
             )
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg"
+        thumb_name = "https://telegra.ph/file/18d25616d9883400af112.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -173,8 +173,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 Jøɩɳ Ɦɘɤɘ & Sʋƥƥøɤʈ 💞",
-                            url=f"https://t.me/ALONE_MUSIC_ADD_ICT")
+                            text="💥 Group Support 💞",
+                            url=f"https://t.me/riogroupsupport")
 
                 ]
             ]
@@ -212,8 +212,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 Jøɩɳ Ɦɘɤɘ & Sʋƥƥøɤʈ 💞",
-                            url=f"https://t.me/ALONE_MUSIC_ADD_ICT")
+                            text="💥 Group Support 💞",
+                            url=f"https://t.me/riogroupsupport")
 
                 ]
             ]
@@ -221,15 +221,15 @@ async def play(_, message: Message):
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg"
+            thumb_name = "https://telegra.ph/file/18d25616d9883400af112.png"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 Jøɩɳ Ɦɘɤɘ & Sʋƥƥøɤʈ 💞",
-                            url=f"https://t.me/ALONE_MUSIC_ADD_ICT")
+                            text="💥 Group Support 💞",
+                            url=f"https://t.me/riogroupsupport")
 
                 ]
             ]
@@ -237,7 +237,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**💥 Musik Tidak Boleh Lebih ⚡️\n Dari {DURATION_LIMIT} 💞 Menit ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -246,9 +246,9 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "**🤖 Ɠɩⱱɘ 🙃 Ɱʋsɩƈ 💿 Ɲɑɱɘ 😍\n💞 Ƭø 🔊 Ƥɭɑy 🌷...**"
+                "**Please Give Songname \n💞 To Play 🌷...**"
             )
-        await lel.edit("**🔄 Ƥɤøƈɘssɩɳʛ ...**")
+        await lel.edit("**🔄 Processing ...**")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -273,7 +273,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**🔊 Ɱʋsɩƈ 😕 Ɲøʈ 📵 Føʋɳɗ❗️\n💞 Ƭɤy ♨️ Ʌɳøʈɦɘɤ 🌷...**"
+                "**🔊 Music Not Found❗️\n💞 Try Another...**"
             )
             print(str(e))
             return
@@ -282,8 +282,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💥 Jøɩɳ Ɦɘɤɘ & Sʋƥƥøɤʈ 💞",
-                            url=f"https://t.me/ALONE_MUSIC_ADD_ICT")
+                            text="💥 Group Support 💞",
+                            url=f"https://t.me/riogroupsupport")
 
                 ]
             ]
@@ -291,7 +291,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**💥 Musik Tidak Boleh Lebih\n Dari {DURATION_LIMIT} 💞 Menit ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -305,7 +305,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="**💥 ϟ ᴀŔᴏN🤞Ʌɗɗɘɗ 💿 Søɳʛ❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{}` 🌷 ...**".format(position),
+            caption="**💥 Playing Music❗️\n🔊 Ʌʈ 💞 Position » `{}` 🌷 ...**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -322,7 +322,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**💥 ϟ ᴀŔᴏN🤞Mʋsɩƈ 🎸 Nøω 💞\n🔊 Ƥɭɑyɩɳʛ 😍 ØƤ 🥀 ...**".format(),
+            caption="**💥 Mirc Music Playing Now 💞\n🔊 Playing OP ...**".format(),
            )
 
     os.remove("final.png")
@@ -335,8 +335,8 @@ async def play(_, message: Message):
 async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg", 
-                             caption="**💥 ϟ ᴀŔᴏN 🔈 Mʋsɩƈ🤞Nøω 🥀\n▶️ Ƥɑʋsɘɗ 🌷 ...**"
+                             photo="https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg", 
+                             caption="**Mirc Music Now\n▶️ Paused 🌷 ...**"
     )
 
 
@@ -346,8 +346,8 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg", 
-                             caption="**💥 ϟ ᴀŔᴏN 🔈 Mʋsɩƈ🤞Nøω 🥀\n⏸ Ƥɭɑyɩɳʛ 🌷 ...**"
+                             photo="https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg", 
+                             caption="**💥Mirc Music Now \n Playing 🌷 ...**"
     )
 
 
@@ -362,7 +362,7 @@ async def skip(_, message: Message):
     for x in clientbot.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("**💥 ϟ ᴀŔᴏN 💞 Ɲøʈɦɩɳʛ 🔇\n🚫 Ƥɭɑyɩɳʛ 🌷 ...**")
+        await message.reply_text("**Mirc Music Nothing 🔇\n🚫 Playing 🌷 ...**")
     else:
         queues.task_done(chat_id)
         
@@ -380,8 +380,8 @@ async def skip(_, message: Message):
 
 
     await message.reply_photo(
-                             photo="https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg", 
-                             caption=f'**💥 ϟ ᴀŔᴏN 🔈 Mʋsɩƈ🤞Nøω 🥀\n⏩ Sƙɩƥƥɘɗ 🌷 ...**'
+                             photo="https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg", 
+                             caption=f'**💥 Mirc Music Now 🥀\n⏩ Skipped 🌷 ...**'
    ) 
 
 
@@ -396,8 +396,8 @@ async def stop(_, message: Message):
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg", 
-                             caption="**💥 ϟ ᴀŔᴏN 🔈 Mʋsɩƈ🤞Nøω 🥀\n❌ Sʈøƥƥɘɗ 🌷 ...**"
+                             photo="https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg", 
+                             caption="**💥 Mirc Music Now 🥀\n❌ Stopped 🌷 ...**"
     )
 
 
@@ -414,6 +414,6 @@ async def admincache(client, message: Message):
     )
 
     await message.reply_photo(
-                              photo="https://telegra.ph/file/ea9415dec53cfb9b78c36.jpg",
-                              caption="**💥 ϟ ᴀŔᴏN 🔈 Mʋsɩƈ🤞Nøω 🥀\n🔥 Ʀɘɭøɑɗɘɗ 🌷 ...**"
+                              photo="https://telegra.ph/file/5b39746a9cbb3b7273c3a.jpg",
+                              caption="**💥 Mirc Music Now 🥀\n🔥 Reloaded 🌷 ...**"
     )
